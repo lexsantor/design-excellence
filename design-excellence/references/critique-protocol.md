@@ -10,7 +10,7 @@ Cheap, self-administered, run at the CRITIQUE stage (`SKILL.md` §1) for every t
 2. **Hierarchy** — squint test (LAYOUT-002): does primary/secondary/grouping survive?
 3. **Distinctiveness** — fingerprint check (`SKILL.md` §6), where in scope.
 4. **Craft correctness** — spot-check against the Rule Catalog categories actually in scope for this task (not all seven — only the ones loaded per `SKILL.md` §7).
-5. **Accessibility** — the P1 always-on gates from `accessibility.md` (A11Y-001, A11Y-002, A11Y-003, A11Y-004) — never skipped, regardless of scope.
+5. **Accessibility** — the P1 always-on gates from `accessibility.md` (A11Y-001, A11Y-002, A11Y-003, A11Y-004, A11Y-009) — never skipped, regardless of scope.
 6. **Technical correctness** — the mechanical-countable rules relevant to what was actually built (motion property restrictions, layout CSS gotchas, etc.).
 
 **Escalation trigger, automatic, not a judgment call:** if the same axis scores below 3 on two consecutive revision passes, that is the signal to escalate to Level 2 — per Hallmark's own finding, "a third revision pass usually means the brief is wrong, not the design," and repeated self-critique failure is exactly the case where a second, differently-biased reviewer earns its cost.
