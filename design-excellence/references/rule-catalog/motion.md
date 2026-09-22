@@ -39,16 +39,16 @@ Canonical decision sequence (walk in order): should it animate → purpose → i
 - **validation:** mechanical-countable (count non-triggered animation instances per page; flag >1 orchestrated moment without justification).
 - **remediation:** consolidate scattered decorative motion into one moment, or cut it.
 
-### MOTION-004 — Property restriction: transform, opacity, clip-path only
+### MOTION-004 — Property restriction: no layout-affecting animation
 - **category:** motion · **layer:** P7 (performance)
-- **principle:** animate only `transform` and `opacity`; `clip-path` is a sanctioned fourth GPU-friendly property. Any other animated property (width/height/margin/padding/top/left, or a framework's `x`/`y`/`scale` shorthand over non-composited properties) is a performance finding, not a style note.
+- **principle:** never animate a property that triggers layout/reflow — `width`/`height`/`margin`/`padding`/`top`/`left`/`right`/`bottom`, or a framework's `x`/`y`/`scale` shorthand applied over a non-composited property. That is the specific harm this rule exists to prevent, not a ban on animation generally. `transform`, `opacity`, and `clip-path` are the preferred, GPU-composited properties for movement, scale, and reveal effects and remain the default choice for that purpose. Paint-only properties — `color`, `border-color`, `background-color` — do not trigger layout/reflow, so a hover or state transition on them is not a MOTION-004 finding; this is a scoped carve-out for paint-only feedback, not a general license to animate anything, and it does not relax MOTION-001/002/003's purpose and frequency gates. `prefers-reduced-motion` handling for any transition, paint-only included, stays MOTION-007's responsibility, not this rule's.
 - **severity:** critical
 - **applicability:** universal — established web-performance fact, not opinion.
 - **exceptions:** none.
-- **evidence:** non-composited property animation causes layout thrash and jank, especially on mobile.
+- **evidence:** non-composited, layout-affecting property animation causes layout thrash and jank, especially on mobile — the specific, measurable harm this rule targets. Paint-only property changes repaint without triggering layout and do not cause that harm, which is why they sit outside this rule's scope rather than inside a disclosed exception to it.
 - **freshness:** status: permanent.
-- **validation:** mechanical-countable (grep animated/transitioned CSS properties against the allowlist).
-- **remediation:** rewrite the animated property to a transform/opacity equivalent (e.g. `grid-template-rows: 0fr → 1fr` for height, not `height: auto`).
+- **validation:** mechanical-countable (grep animated/transitioned CSS properties; flag any that trigger layout/reflow per the list above; `color`/`border-color`/`background-color` are not flagged).
+- **remediation:** rewrite a layout-affecting animated property to a transform/opacity equivalent (e.g. `grid-template-rows: 0fr → 1fr` for height, not `height: auto`). Paint-only properties need no rewrite.
 
 ### MOTION-005 — Duration budget by element type
 - **category:** motion · **layer:** P5
