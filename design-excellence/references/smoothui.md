@@ -41,8 +41,9 @@ Resolved via the existing Authority Hierarchy (`SKILL.md` §3), not a parallel S
 5. **P5 UX purpose and product requirements** — the component's role must already be established as genuinely needed, per `SKILL.md` §9 Core Principle 11 and the brief/`SHAPE` decisions.
 6. **P6 Anti-Slop/distinctiveness** — a SmoothUI implementation still has to clear the same registry as any other implementation (see Anti-Slop below).
 7. **SmoothUI, for an already-justified component with no established implementation** — the point at which this file is actually consulted, once (1)–(6) all clear.
-8. **P7 performance/production hardening** — the general performance-hardening rule category binds any SmoothUI component exactly as it binds a hand-built one.
-9. **P8 aesthetic preference** — lowest precedence, exactly as `SKILL.md` §3 already orders it.
+8. **Other/custom implementation** — only when justified (SmoothUI doesn't fit the implementation constraints, a specific technical constraint rules it out, etc.), stated as a deliberate choice rather than a fallback. A specific technical constraint can include the source/package/API being genuinely unverifiable or unusable in the current build environment — this is genuine inability to verify or use the source, not absence of effort, and is never invoked merely because the source wasn't investigated, nor because the project is greenfield or has no build step. When `.design/context.md` exists, record this deliberate choice under its existing Known Exceptions section (`SKILL.md` §5).
+9. **P7 performance/production hardening** — the general performance-hardening rule category binds any SmoothUI component — or its Other/custom substitute — exactly as it binds a hand-built one.
+10. **P8 aesthetic preference** — lowest precedence, exactly as `SKILL.md` §3 already orders it.
 
 ## Existing Project Safety
 

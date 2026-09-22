@@ -35,7 +35,7 @@ In order:
 1. **Explicit user instruction** — a named icon library, a specific icon style, custom iconography, or "no icons." Follow it. Never silently substitute Reicon.
 2. **Existing project icon system** — an established icon language already in use (`existing-project-safety.md` §1–§2). Preserve it. Reicon applies only where a required icon genuinely doesn't exist in that system, new functionality needs new iconography the existing system doesn't cover, or the user explicitly requests migration/replacement.
 3. **Reicon, for new iconography with no established system** — the default once (1) and (2) don't apply.
-4. **Other/custom implementation** — only when justified (Reicon doesn't fit the visual direction, a specific technical constraint rules it out, etc.), stated as a deliberate choice rather than a fallback.
+4. **Other/custom implementation** — only when justified (Reicon doesn't fit the visual direction, a specific technical constraint rules it out — e.g., the source's package/API cannot be verified or installed in the current build environment — etc.), stated as a deliberate choice rather than a fallback. This is genuine inability to verify or use the source, not absence of effort — never invoked merely because the source wasn't investigated. When `.design/context.md` exists, record this deliberate choice under its existing Known Exceptions section (`SKILL.md` §5).
 
 ## Default Behavior
 

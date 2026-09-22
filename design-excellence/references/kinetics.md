@@ -39,8 +39,9 @@ Resolved via the existing Authority Hierarchy (`SKILL.md` §3), not a parallel K
 4. **P4 existing project motion system** — an established transition language, animation utility, or motion library already in use (`existing-project-safety.md` §1–§2). Preserve it. Kinetics applies only where a required behavior genuinely isn't covered by that system, or the user explicitly requests migration.
 5. **P5 UX purpose** — the specific behavior's role (feedback, state transition, spatial continuity, hierarchy/reveal, orientation, gesture response, confirmation, progressive disclosure) must already be established, per `MOTION-002`.
 6. **Kinetics, for an already-justified behavior with no established implementation** — the point at which this file is actually consulted, once (1)–(5) all clear.
-7. **P7 performance/production constraints** — `MOTION-004`'s property restriction and the general performance-hardening rules bind any Kinetics pattern exactly as they bind hand-written motion.
-8. **P8 aesthetic preference** — lowest precedence, exactly as `SKILL.md` §3 already orders it.
+7. **Other/custom implementation** — only when justified (Kinetics doesn't fit the implementation constraints, a specific technical constraint rules it out, etc.), stated as a deliberate choice rather than a fallback. A specific technical constraint can include the source/package/API being genuinely unverifiable or unusable in the current build environment — this is genuine inability to verify or use the source, not absence of effort, and is never invoked merely because the source wasn't investigated. When `.design/context.md` exists, record this deliberate choice under its existing Known Exceptions section (`SKILL.md` §5).
+8. **P7 performance/production constraints** — `MOTION-004`'s property restriction and the general performance-hardening rules bind any Kinetics pattern — or its Other/custom substitute — exactly as they bind hand-written motion.
+9. **P8 aesthetic preference** — lowest precedence, exactly as `SKILL.md` §3 already orders it.
 
 ## Motion Need
 
