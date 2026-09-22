@@ -98,4 +98,5 @@ No numerical scoring is introduced.
 - Abstracting a one-off into a reusable component below the 3+-uses/same-intent threshold.
 - Replacing an existing project's working component or design system absent a genuine gap, explicit migration request, or explicit user instruction.
 - A visual style, density, spacing, color, or motion decision — those remain governed entirely by Register/Genre/Dials and the rule catalog, not by what SmoothUI ships.
+- Iconography bundled inside an adopted component — an icon a SmoothUI component ships with still needs to independently clear `reicon.md`'s own need/role test, the same as any other icon; it does not bypass that test merely because it arrived as part of the component's default markup. An existing project icon system or explicit user instruction governing icons remains authoritative regardless, and a bundled icon that is already justified and appropriate does not need to be replaced.
 - Treating "SmoothUI has this component" as evidence the interface should use it.
