@@ -1,0 +1,39 @@
+# Critique Protocol (T2)
+
+Two levels. Level 1 is always-on and cheap. Level 2 is a stakes-gated escalation, never a default — running it on every task defeats the point of having a cheap floor at all.
+
+## Level 1 — Self-critique floor (always-on)
+
+Cheap, self-administered, run at the CRITIQUE stage (`SKILL.md` §1) for every task except pure AUDIT (where the audit itself *is* the critique). Score six axes 1–5, stamp the result into `.design/context.md`'s Fingerprint History or a session note:
+
+1. **Genericness** — would this be produced for any similar brief, or does it derive specifically from this Product Truth (`SKILL.md` §4/§5)? Includes a gestalt check (Phase 6 correction): compare the finished direction's color-anchor + typography + accent combination against `anti-slop-registry.md` SLOP-011's named clusters as a whole, not each dimension checked separately against its own atomic rule — a direction can pass every individual Anti-Slop entry and still match a named cluster in combination. This reuses SLOP-011's existing cluster definitions; it does not add new Anti-Slop entries. Also includes a structural-test check (Phase 6.3 addition), applied only when DEFINE (`SKILL.md` §1) recorded **DETECTED / EVIDENCED** specifically (Phase 6.5 tightening — a HYPOTHESIS-only outcome does not trigger this check): would the concept still be perceptible if the logo, color palette, imagery, and copy were removed — i.e. does it live in an organizing decision (`layout-interaction.md` LAYOUT-009) or in decoration only? This sharpens this same axis's existing question; it is a qualitative diagnostic, not a score — a "no" prompts a closer look, it does not automatically fail the axis, and it never runs unless DEFINE recorded DETECTED / EVIDENCED.
+2. **Hierarchy** — squint test (LAYOUT-002): does primary/secondary/grouping survive?
+3. **Distinctiveness** — fingerprint check (`SKILL.md` §6), where in scope.
+4. **Craft correctness** — spot-check against the Rule Catalog categories actually in scope for this task (not all seven — only the ones loaded per `SKILL.md` §7).
+5. **Accessibility** — the P1 always-on gates from `accessibility.md` (A11Y-001, A11Y-002, A11Y-003, A11Y-004) — never skipped, regardless of scope.
+6. **Technical correctness** — the mechanical-countable rules relevant to what was actually built (motion property restrictions, layout CSS gotchas, etc.).
+
+**Escalation trigger, automatic, not a judgment call:** if the same axis scores below 3 on two consecutive revision passes, that is the signal to escalate to Level 2 — per Hallmark's own finding, "a third revision pass usually means the brief is wrong, not the design," and repeated self-critique failure is exactly the case where a second, differently-biased reviewer earns its cost.
+
+## Level 2 — Independent critique (stakes-gated escalation)
+
+**Trigger conditions (any one is sufficient):**
+- Production-facing, brand-critical, or high-traffic work (explicit stakes signal from the brief or Product Truth).
+- Task Mode = REDESIGN at page/multi-page-site scope (`SKILL.md` §2 — REDESIGN escalates by default).
+- Task Mode = BUILD, Project State = genuinely-empty, multi-page-site scope, and the brief states an explicit brand-quality bar ("premium," "flagship," "brand identity," or equivalent) (Phase 6 correction — a routing trigger only; matches how REDESIGN already escalates by default for analogous stakes. This trigger decides *when* Level 2 should be attempted, not whether it can be — the Mechanism/Honest-limitation sections below still govern whether it actually runs).
+- Level 1's automatic escalation trigger above.
+
+**Do not run Level 2 by default for BUILD at component/section scope, or for any POLISH task** — that defeats the cost-saving purpose of having a floor.
+
+**Mechanism — resolved for this implementation environment, not assumed from the source research.** `FORENSIC-EXTRACTION.md` and `ARCHITECTURE.md` §16 both flag that none of the six extracted source skills describe how to implement genuinely *independent* (not just tab-isolated) critique. This Claude Code environment provides a real mechanism for it: dispatching a fresh subagent that starts with zero visibility into this session's work.
+
+**Implementation:**
+1. Prepare a self-contained brief for the dispatched agent: the rendered output/code, the relevant Rule Catalog categories and Anti-Slop Registry entries (by id, not restated), and the critique rubric (the same six axes as Level 1). **Do not include** the Level 1 self-critique's own scores or findings — the dispatched reviewer must not see them before forming an independent judgment, matching the dual-blind isolation principle this pattern is modeled on. When DEFINE recorded **DETECTED / EVIDENCED** (`SKILL.md` §1) — never for a HYPOTHESIS-only outcome (Phase 6.5 tightening) — also include the structural test from Level 1's Genericness axis above as one of the reviewer's instructions (Phase 6.3 addition) — formalizing what PHASE-6.2's own independent reviewer already applied unprompted. Its result is reported as a diagnostic alongside the reviewer's other findings, never treated as an automatic failure, and this does not add a new Level 2 trigger condition — Level 2 still only runs when an existing trigger condition (above) fires.
+2. Dispatch a genuinely fresh agent (not a `fork` — a fork inherits this session's full context and would defeat the isolation). If this environment has a specialized fresh-context design-critic agent available (for example, an installed `lexia-design:visual-critic` or `lexia-design:ux-auditor`-equivalent), prefer it — it's purpose-built for exactly this. Otherwise, dispatch a general-purpose agent with the self-contained brief from step 1.
+3. Synthesize: compare the independent reviewer's findings against Level 1's scores *after* both exist. Disagreement between the two is itself a signal worth surfacing to the user, not silently resolved in either direction.
+
+**Honest limitation, not smoothed over:** this mechanism depends on the host environment actually supporting isolated subagent dispatch. If a future environment running this skill does not provide that, do not simulate independence by asking the same context to "pretend" to be a second reviewer — that is not independent critique, it inherits the same blind spots that produced the output. In that case, fall back to Level 1 only, and report plainly — verbatim, not paraphrased into something softer — `Level 2 unavailable — independent dispatch capability not available` (Phase 6 correction: this exact report is required whenever a trigger condition above fires but no real isolated-dispatch mechanism executes) rather than presenting a self-review as if it were independent, and never claim Level 2 "ran" unless a genuinely fresh, isolated agent actually executed it.
+
+## What Level 2 is not
+
+Not a replacement for Level 1 — Level 1 always runs regardless of whether Level 2 also runs. Not mandatory for every production task — only the trigger conditions above justify its cost. Not a fork of the current session — isolation is the entire point.
