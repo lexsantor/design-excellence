@@ -13,3 +13,6 @@ Thumbs.db
 # Editors
 .vscode/
 .idea/
+
+# Local Claude skill junction
+.claude/skills/design-excellence/
