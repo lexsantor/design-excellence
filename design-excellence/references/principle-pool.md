@@ -79,3 +79,42 @@ Principle
   - responsive-behavior
 - **compatible_with.notes:** Brand register only, the register of the source. Genre-neutral by curator judgment: no clause depends on a genre's default posture, so all four genres are listed as target applicability. This is not a statement about the source's genre.
 - **confidence:** medium
+
+### PRN-0003
+
+- **id:** PRN-0003
+- **status:** accepted
+- **dimension:** content-architecture
+- **organizing_surface:**
+  - content-architecture
+- **observed:** One source, read in code and rendered at one wide and one narrow frame. A claims section makes three claims, each closing with a short list of what it says is recorded. Each example item on the same page carries a small field list holding the values the first claim says are recorded, with an action on one of them; an example derived from another shows a value taken from its parent in place of its own. A second page lists a larger set of examples with the same fields; some are labelled as derived from a named earlier example and reference it, which is the derivation claim made on the first page. Of the other two claims, one (a capacity claim) has no field on any example, and the other is carried only in part: one of the record fields it names appears on the examples. On the narrow frame the first page keeps every example's field list; the second page drops the per-example fields from its list, keeps each example's derivation label, and shows the full field list of the selected example, including its parent reference, in a detail view placed above the list.
+- **abstracted_principle:** Structure a presentational page's examples by its claims: couple the section that makes claims with the section that shows examples, so that each claim that can be traced to an item is carried as a field every example exposes, and a claim about deriving one thing from another is carried by an example that names the one it came from. Claims that no item can carry stay stated claims and are not dressed up as fields. The examples section then takes its structure from the claims section instead of running beside it as an independent gallery. Where space is short, the fields may move into a detail view of the selected item; the coupling holds only while every item's fields remain reachable there.
+- **compatible_with.registers:**
+  - brand-led
+  - hybrid
+- **compatible_with.genres:**
+  - editorial
+  - modern-minimal
+  - atmospheric-expressive
+  - playful
+- **do_not_apply_to:**
+  - Claims with no item-level trace (speed, support, reliability, scale): they stay stated claims, and adding fields for them puts values on items that no claim needs. The supporting source leaves one such claim without any field and carries another only in part.
+  - Shipping the structure with placeholder values: example fields must hold real items' values, otherwise they give the form of proof without its substance and fall under the rule against fabricated data.
+  - Items whose properties cannot be shown (private, sensitive or proprietary data).
+  - Working views in a product the user operates: the principle concerns examples on presentational pages, not how records are shown in a tool.
+  - Items that carry only a name or a caption: without at least one claim an item can actually carry, there is nothing to couple.
+  - Dropping the fields on constrained frames with no other way to reach them; the supporting evidence examined only one wide and one narrow frame.
+  - As a metadata-display rule: where showing item fields is already the default for the genre, the principle adds only the choice of fields by the claims and the parent reference; showing fields alone is not an application.
+- **non_application_note:** A literal copy would reproduce the source's particular field set, its value formats, its per-field actions, the split between a short example set and a full list, and its labels for derived items; the fields are also not meant to be rendered as middle-dot meta strings or as a uniform card grid. None of these is the principle: the principle is that the examples section is structured by the claims section, so each traceable claim is carried by a field on every example and a derivation claim by an example that names its parent.
+- **evidence_basis:**
+  - RENDERED
+  - CODE
+- **support_breadth.kind:** single-source
+- **support_breadth.cluster_count:** 1
+- **family:** commercial-ui-template
+- **freshness.last_verified_date:** 2026-09-25
+- **freshness.review_interval_days:** 90
+- **carrier_surfaces:**
+  - responsive-behavior
+- **compatible_with.notes:** Useful where the product produces or keeps inspectable items (records, orders, submissions, versions, requests). Genre-neutral by curator judgment: the principle couples two sections of a page through the item fields the claims determine, not a presentation. Hybrid is an extrapolation from a brand-led source page.
+- **confidence:** medium
