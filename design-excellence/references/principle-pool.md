@@ -4,7 +4,7 @@ Accepted design principles, curated outside this repository from observed produc
 
 **Role.** An EXPLORE input for DIRECT only (`SKILL.md` §1, `layout-interaction.md` LAYOUT-010). It gives EXPLORE further externally-observed possibilities to consider beside `visual-references.md`. Entries are generative possibilities, not rules: none is ever required, and "considered, judged unnecessary" is a valid outcome. Never used by CRITIQUE or AUDIT and never a quality bar.
 
-**Loading.** Loads together with `visual-references.md` under the identical DIRECT/DESIGN-for-a-new-visual-system trigger (`SKILL.md` §7), never on its own. Not a new load event and not a new pipeline stage. LAYOUT-010 treats both files as one combined selection source: at most 2–3 entries are considered in total across both pools, and its family tie-break compares production traditions across both pools.
+**Loading.** Loads together with `visual-references.md` under the identical DIRECT/DESIGN-for-a-new-visual-system trigger (`SKILL.md` §7), never on its own. Not a new load event and not a new pipeline stage. LAYOUT-010 treats both files as one combined selection source: every entry is screened, and at most 2–3 entries in total across both pools are seriously considered, and its family tie-break compares production traditions across both pools.
 
 **Ceiling.** 15 entries is a hard ceiling for this pool; the first curation pass stops at 8. `accepted` and `stale` entries both count. No single production cluster supplies more than 2 entries. The ceiling is not a target: grow only when a genuinely new possibility justifies it.
 
