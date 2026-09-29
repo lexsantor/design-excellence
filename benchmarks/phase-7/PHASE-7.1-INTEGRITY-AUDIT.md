@@ -234,7 +234,7 @@ come away more confident about A11Y-009's reach than the architecture supports.
   (`SKILL.md` + `references/`). Repository root contains no phase/benchmark document —
   confirmed via a full top-level listing.
 - **Junction:** `.claude/skills/design-excellence` exists as a symlink/junction
-  pointing to `/c/Users/lexsa/Desktop/design-excellence/design-excellence/` — the local
+  pointing to `<repo-root>/design-excellence/` — the local
   source, correctly targeted.
 - **Ignored paths:** `git check-ignore -v` confirms both
   `.claude/skills/design-excellence` (via `.gitignore:18`) and

@@ -33,8 +33,8 @@
 ### SLOP-004 — Eyebrow/tag-left-header-right hanging layout
 - **category:** layout · **severity:** critical
 - **statement:** any wrapper containing both a section label/number and a heading, laid out as two columns (label left, heading right), is one of the most-recognized templated-editorial-SaaS tells. Must resolve to single-column.
-- **applicability:** universal — deliberately non-negotiable, per the source, even under an instruction to "preserve structural parity with a reference build" (the reference build predates the rule).
-- **exceptions:** none stated in source material — this is the one entry in this registry explicitly flagged as overriding even a literal "match this" instruction. Cross-reference `SKILL.md` §3 (P1 override, disclosed) before applying that override in practice — this registry entry alone does not grant silent-override authority; the disclosure requirement still applies.
+- **applicability:** universal. The source treated this entry as non-negotiable even under an instruction to "preserve structural parity with a reference build"; that stance is not adopted here (see exceptions).
+- **exceptions:** an explicit user instruction to keep or match this layout, including preserving parity with a reference build, wins. This entry is Anti-Slop (P6, `SKILL.md` §3) and not on the P1 enumerated list, so it never overrides an explicit instruction (P2), silently or with disclosure. Follow the instruction; naming the tell once is enough.
 - **remediation:** collapse to block/flex-column/grid-1fr.
 - **source:** Hallmark · **created_date:** 2026-09-20 · **last_verified_date:** 2026-09-20 · **confidence:** first-pass · **status:** active · **replacement_id:** — · **review_interval_days:** 90
 

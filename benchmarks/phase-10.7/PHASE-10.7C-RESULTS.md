@@ -36,7 +36,7 @@
 | D Critique depth | §1 CRITIQUE row: `CRITIQUE(floor)` = Level 1 minimum, Level 2 when triggered; only `CRITIQUE(floor only)` caps it. §1 bounded rule: stage selection doesn't govern depth. `critique-protocol.md` Level 2 triggers apply under `CRITIQUE(floor)` | PASS |
 | E No-render input | `critique-protocol.md` step 1: (a) render + code, (b) design artifact/spec + relevant code, (c) directions-only exploration deliverable; never fabricate; unassessable axes are reported, not scored | PASS |
 | F Pools | Same trigger via §7 (both rows), "not a new load event"; never CRITIQUE/AUDIT; LAYOUT-010 screens every entry, then at most 2–3 combined; family = tie-breaker only; freshness now stated in both headers (§1) | PASS |
-| G Principle Pool governance | Ceiling 15, first pass 8, ≤ 2 per cluster, stale counts but not considered; schema status is `accepted \| stale` with only accepted consumable (other statuses cannot enter the file); changes only through reviewed promotion, no automatic sync or eviction; opaque id is the only provenance. Leak grep (catalog paths, UI8, record ids, hex colours, images): no hits | PASS |
+| G Principle Pool governance | Ceiling 15, first pass 8, ≤ 2 per cluster, stale counts but not considered; schema status is `accepted \| stale` with only accepted consumable (other statuses cannot enter the file); changes only through reviewed promotion, no automatic sync or eviction; opaque id is the only provenance. Leak grep (catalog paths, source names, record ids, hex colours, images): no hits | PASS |
 | H Concept → Structure | §1 three-state model; brand name alone is at most HYPOTHESIS; HYPOTHESIS never triggers LAYOUT-009 or the structural test (`critique-protocol.md` axis 1); LAYOUT-009 "not an Anti-Slop rule"; runs inside DIRECT/EXPLORE | PASS |
 | I Anti-Slop | LAYOUT-009/010 both state orthogonality (subtractive vs generative); Anti-Slop loads for CRITIQUE/AUDIT, the pools never do | PASS |
 | J T4 | §7 T4 row plus `reicon.md`/`kinetics.md`/`smoothui.md` precedence: user instruction and existing system first; Reicon default only where new iconography is needed; Kinetics only for already-justified motion; SmoothUI never justifies componentization (Principle 11); stack settled independently; migration requires Replace confirmation. Stage wording: see §4 | PASS (see §4) |
@@ -52,10 +52,10 @@
 
 - Changed: `design-excellence/references/visual-references.md`, `design-excellence/references/rule-catalog/layout-interaction.md`, this report.
 - Unchanged: `SKILL.md`, `principle-pool.md`, `critique-protocol.md`, all REF/PRN records, Anti-Slop, T4 files, prior benchmark history.
-- UI8 catalog (`E:\_UI8\_CATALOG`): clean working tree, HEAD `40226c4` (committed before this session). Raw UI8 library: not accessed.
+- External reference catalog: clean working tree, no changes from this session. The licensed reference library itself: not accessed.
 - Pre-existing untracked `rules.md` and `scratchpad/`: left untouched and not committed.
 - Commit: see the git log entry after `6afba31` (`docs: add visual reference staleness rule`).
 
 ## 6. Readiness
 
-Ready for the next UI8 principle curation batch: both pools have a stated overdue rule, governance is internally consistent, and every regression area passes. The pool holds 1 of 8 first-pass entries (15 ceiling).
+Ready for the next principle curation batch: both pools have a stated overdue rule, governance is internally consistent, and every regression area passes. The pool holds 1 of 8 first-pass entries (15 ceiling).

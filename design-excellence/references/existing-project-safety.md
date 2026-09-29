@@ -4,7 +4,7 @@ Loaded whenever Project State ≠ genuinely-empty (`SKILL.md` §2). Implements t
 
 ## 1. Inspect (mandatory, before any design decision)
 
-Ordered scan, cited with file:line where applicable, cached to `.design/preflight-cache.json`, invalidated on relevant file-mtime change or an explicit "refresh" request:
+Ordered scan, cited with file:line where applicable, invalidated on relevant file-mtime change or an explicit "refresh" request. Cache it to `.design/preflight-cache.json` only in a Task Mode that writes to the project (BUILD, REDESIGN). POLISH, CRITIQUE, AUDIT and DISCOVER, and any bounded Pipeline Profile that ends before BUILD, keep the scan in the session and write nothing to the project for it. With no `.design/context.md` yet, see `SKILL.md` §5 "First contact":
 
 1. `.design/context.md` — read first if it exists; it supersedes re-deriving anything below from scratch.
 2. Fonts — existing `@font-face`/import declarations, font-family usage.
@@ -45,7 +45,7 @@ Capture this baseline before any visual change — it is the redesign's own regr
 
 After BUILD:
 1. Re-run the Inspect scan (§1).
-2. Diff the result against the Constraints & Preserved Patterns list in `.design/context.md`.
+2. Diff the result against the Constraints & Preserved Patterns list in `.design/context.md`; where no such list exists yet, diff against the §1 preserve/introduce summary.
 3. Confirm nothing on that list actually changed. If something did, that's a `HARDEN-002` violation — disclose it per `SKILL.md` §3's P1 disclosure rule, don't silently ship it.
 
 This is the regression check referenced in `SKILL.md` §1 (VALIDATE stage) for any BUILD-in-existing-project or REDESIGN task.

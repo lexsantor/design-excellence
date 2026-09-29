@@ -34,7 +34,7 @@ Do not load this file or consider SmoothUI for:
 
 Resolved via the existing Authority Hierarchy (`SKILL.md` §3), not a parallel SmoothUI-specific ordering:
 
-1. **P1 safety/correctness** — the accessibility floor (`A11Y-002` keyboard operability + `:focus-visible`, `A11Y-005` touch target size, `A11Y-007` form-field state bugs, and the rest of the P1 list). Non-negotiable.
+1. **P1 safety/correctness** — the accessibility floor (`A11Y-002` keyboard operability + `:focus-visible`, and the rest of the `SKILL.md` §3 P1 list). Non-negotiable. Accessibility rules outside that list, such as `A11Y-005` touch target size (P5) and `A11Y-007` form-field state bugs (P7), bind a SmoothUI component exactly as they bind a hand-built one, at their own layers.
 2. **P2 explicit user instruction** — a named component library, a specific implementation approach, or "no SmoothUI." Follow it. Never silently substitute SmoothUI.
 3. **P3 Register/Genre/established design direction** — the direction already committed at DIRECT/SHAPE. SmoothUI conforms to it, never overrides it.
 4. **P4 existing project component/design system** — an established component library, shared component set, or design system already in use (`existing-project-safety.md` §1–§2). Preserve it. SmoothUI applies only where a required component genuinely isn't covered by that system, or the user explicitly requests migration.

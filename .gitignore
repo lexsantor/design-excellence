@@ -16,3 +16,22 @@ Thumbs.db
 
 # Local Claude skill junction
 .claude/skills/design-excellence/
+
+# Dependencies and build output in disposable test projects
+node_modules/
+.next/
+
+# Tool-generated temporary output
+.playwright-mcp/
+__pycache__/
+
+# Credentials
+.env
+.env.*
+!.env.example
+
+# Source-identified reference evidence and inventories: never committed (principle-pool.md identity boundary)
+de-completion-sprint/reference-triage/
+tools/reference-screen.local.json
+themes-links.md
+figma-links.md

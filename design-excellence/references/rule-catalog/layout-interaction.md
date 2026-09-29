@@ -34,7 +34,7 @@ Named banned layout patterns (e.g. the eyebrow/tag-left-header-right two-column 
 - **remediation:** switch the query type to match what's actually being resized.
 
 ### LAYOUT-004 — `overflow-x: clip`, not `hidden`
-- **principle:** use `clip` (not `hidden`) on `html`/`body` to prevent horizontal scroll, because `hidden` silently breaks `position: sticky`/`position: fixed` on descendants — a non-obvious CSS interaction.
+- **principle:** use `clip` (not `hidden`) on `html`/`body` to prevent horizontal scroll, because `hidden` silently breaks `position: sticky`/`position: fixed` on descendants — a non-obvious CSS interaction. Either value only removes the scrollbar; it does not fix the overflow. Content it cuts off is still checked by `A11Y-010` (reflow).
 - **category:** layout · **layer:** P7 (production hardening) · **severity:** major
 - **applicability:** universal CSS fact.
 - **evidence:** the naive fix for a common bug (horizontal scroll) has a side effect most people don't know about.
@@ -126,7 +126,7 @@ Named banned layout patterns (e.g. the eyebrow/tag-left-header-right two-column 
 - **applicability:** universal, especially at narrow responsive widths.
 - **evidence:** a visually obvious "wasn't tested at this width" tell, common because responsive testing usually eyeballs body copy, not button labels.
 - **freshness:** status: permanent.
-- **validation:** mechanical-countable (rendered, Enhanced mode: check for wrapped clickable text at the required floor widths).
+- **validation:** mechanical-countable (rendered, Enhanced mode: check for wrapped clickable text at the required floor widths: the narrowest width of each layout range, meaning each declared responsive breakpoint (`SKILL.md` §5 Responsive Notes) or, where none are declared, each width breakpoint the stylesheets define, plus the narrowest width the project declares it supports, if any. `A11Y-010`'s 320 CSS px reflow floor is checked separately and is not implied here).
 - **remediation:** apply the fix-priority order above.
 
 ### INTX-004 — Responsive action hierarchy depends on competing-action count, not viewport width alone

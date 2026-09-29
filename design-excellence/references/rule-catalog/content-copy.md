@@ -23,11 +23,11 @@ Copy is design material, not decoration — evaluated with the same intentionali
 - **remediation:** rewrite against the formula; add a concrete next action for empty states (what will be here / why it matters / how to start).
 
 ### CONTENT-003 — No fabricated data or invented metrics
-- **principle:** stat-led layouts, comparison rows, proof bars, and testimonials must never contain a number or name the user didn't supply. Required fallback: a labeled placeholder ("—," "metric to confirm") or removing the stat slot entirely — never a plausible-sounding fabrication.
+- **principle:** stat-led layouts, comparison rows, proof bars, and testimonials must never contain a number or name the user didn't supply. Content already present in an existing project — its own figures, names, testimonials — counts as supplied: this rule never replaces it with a placeholder or changes its facts. Reusing it does not verify it, and it never licenses new or derived claims. Edits the user asks for, and copy edits that keep its facts, are outside this rule. Required fallback for content that would otherwise be invented: a labeled placeholder ("—," "metric to confirm") or removing the stat slot entirely — never a plausible-sounding fabrication.
 - **category:** content-copy · **layer:** P1 (safety — on the enumerated list in `SKILL.md` §3) · **severity:** critical
 - **applicability:** universal — a correctness/trust issue, not a taste issue, and applies well beyond visual design to any generative content task.
 - **exceptions:** none.
 - **evidence:** layouts that "demand" a number in a slot cause fabrication under pressure; the fallback removes that pressure.
 - **freshness:** status: permanent.
-- **validation:** mechanical-countable (flag numeric/named claims not traceable to user-supplied brief content).
+- **validation:** mechanical-countable (flag numeric/named claims not traceable to user-supplied brief content or to the existing project's own content).
 - **remediation:** replace with a labeled placeholder or remove the slot; disclose to the user that data is needed (per `SKILL.md` §3's P1 disclosure rule).
