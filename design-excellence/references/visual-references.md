@@ -1,8 +1,8 @@
 # Visual References (T3)
 
-Nine demonstration entries, not a catalog — same restraint `style-catalog.md` applies to itself. **10 entries is a hard ceiling for this pool (Phase 6.5); grow only when a genuinely new design possibility justifies it, never to fill a round number.** Gives DIRECT's EXPLORE step (`SKILL.md` §1, `layout-interaction.md` LAYOUT-010) a small set of externally-observed design possibilities to consider, so candidates aren't generated only from Genre's own default posture. **Observe → Abstract → Adapt. Never copy.**
+Eight demonstration entries, not a catalog — same restraint `style-catalog.md` applies to itself. **10 entries is a hard ceiling for this pool (Phase 6.5); grow only when a genuinely new design possibility justifies it, never to fill a round number.** Gives DIRECT's EXPLORE step (`SKILL.md` §1, `layout-interaction.md` LAYOUT-010) a small set of externally-observed design possibilities to consider, so candidates aren't generated only from Genre's own default posture. **Observe → Abstract → Adapt. Never copy.**
 
-REF-001–REF-006 (Phase 6.4) are web/documentation/editorial-adjacent production traditions. REF-007–REF-009 (Phase 6.5) deliberately draw from traditions with no native page/screen metaphor — transit/civic wayfinding, laboratory instrumentation, packaging/print ephemera — added because benchmarking found the original six, while each individually valid, shared one production family closely enough to still converge on a "premium editorial" visual language as a pool (`PHASE-6.4-RESULTS.md` §9). A fourth candidate (civic/government form field-sequencing) was considered and set aside for this pass — its distinguishing feature overlaps enough with ordinary form UX already covered elsewhere in this skill's own rules that it was a weaker addition than the three shipped here; revisit only if future evidence shows a real gap.
+REF-001–REF-006 (Phase 6.4) are web/documentation/editorial-adjacent production traditions. REF-007–REF-009 (Phase 6.5) deliberately draw from traditions with no native page/screen metaphor — transit/civic wayfinding, laboratory instrumentation, packaging/print ephemera — added because benchmarking found the original six, while each individually valid, shared one production family closely enough to still converge on a "premium editorial" visual language as a pool (`PHASE-6.4-RESULTS.md` §9). A fourth candidate (civic/government form field-sequencing) was considered and set aside for this pass — its distinguishing feature overlaps enough with ordinary form UX already covered elsewhere in this skill's own rules that it was a weaker addition than the three shipped here; revisit only if future evidence shows a real gap. REF-006 (a visible counter advancing through a finite sequence) was retired on 2026-09-29: its principle is REF-003's bounded-set position applied to transitions, so it added no distinct possibility. Its id is not reused.
 
 Entries describe a real, commonly-observed production pattern generically (a class of site, not a named brand) — no entry carries a recognizable source identity to begin with. Loads under the identical DIRECT/DESIGN-for-a-new-visual-system trigger `style-catalog.md` already uses (`SKILL.md` §7) — not a new load event. An entry whose `last_verified_date + review_interval_days` has passed when this file is consulted is **not considered**; it is re-verified (new `last_verified_date`) or removed, never silently kept — the same rule `principle-pool.md` applies.
 
@@ -52,10 +52,10 @@ VisualReference
 ### REF-004 — Oversized numerals as structural dividers
 - **dimension:** typography
 - **observed:** some print-derived editorial sites use large running numerals (a folio, a section count) as the divider language instead of a rule or border.
-- **abstracted_principle:** typography doing structural work (marking a boundary) rather than only communicative work — division through scale contrast inside the type system itself.
+- **abstracted_principle:** typography doing structural work (marking a boundary) rather than only communicative work — division through scale contrast inside the type system itself. The numeral must be a true position in a real ordered structure the reader can use (actual chapters, steps, or sections), so the divider carries information as well as marking the boundary.
 - **compatible_with:** editorial; brand-led; Medium–High `DESIGN_VARIANCE`.
-- **do_not_apply_to:** modern-minimal/product-led, where the numeral competes with functional hierarchy instead of serving it.
-- **non_application_note:** don't copy the specific numeral typeface or scale ratio — the principle is the divider logic, not that appearance.
+- **do_not_apply_to:** modern-minimal/product-led, where the numeral competes with functional hierarchy instead of serving it; any content whose sections have no real order or count, where numbering would exist only to supply the divider (the decorative index/folio labels `anti-slop-registry.md` SLOP-018 flags).
+- **non_application_note:** don't copy the specific numeral typeface or scale ratio — the principle is the divider logic, not that appearance. Never invent numbering, zero-padded counts, or index labels to justify the divider; without a real enumeration, use a rule or spacing instead.
 - **freshness:** last_verified_date: 2026-09-21 · review_interval_days: 90
 
 ### REF-005 — Process imagery instead of polished hero photography
@@ -67,22 +67,13 @@ VisualReference
 - **non_application_note:** don't copy the subject matter, materials, or framing shown — the principle is process-over-polish, not any particular process.
 - **freshness:** last_verified_date: 2026-09-21 · review_interval_days: 90
 
-### REF-006 — Reveal tied to a persistent counted index, not a scroll-fade
-- **dimension:** interaction / transition
-- **observed:** some case-study/portfolio sites advance via a visible counter ("02/08") incrementing per section, each transition a discrete state change, not a continuous scroll-fade.
-- **abstracted_principle:** progress made legible as a finite, countable sequence the user can watch themselves move through, not an open-ended scroll of unstated length.
-- **compatible_with:** brand-led; editorial/playful; a genuinely finite content sequence.
-- **do_not_apply_to:** Low `MOTION_INTENSITY` (discrete transitions still carry motion weight), or content with no real fixed count.
-- **non_application_note:** don't copy the counter's typography/placement or exact transition timing — the principle is visible countable progress, not that implementation.
-- **freshness:** last_verified_date: 2026-09-21 · review_interval_days: 90
-
 ### REF-007 — Color as the wayfinding system itself, not an accent on top of one
 *(Phase 6.5 addition — non-page/screen tradition: transit/civic wayfinding.)*
 - **dimension:** navigation
 - **observed:** metro/rail network maps assign each line a distinct color that functions as the primary identification and navigation cue — platform signage, vehicle livery, and the map itself all key off the same color, and it means the same thing everywhere it appears, independent of medium (printed, backlit, handheld).
 - **abstracted_principle:** color used as the navigational index itself, not a decorative accent layered on top of a separately-labeled system — the same color always denotes the same path, so a user can navigate by color alone without reading every label.
 - **compatible_with:** hybrid/product-led register; modern-minimal or playful genre; content with a genuinely bounded, nameable set of parallel paths or sections (distinct product lines, service tiers, content tracks).
-- **do_not_apply_to:** a brief with only one primary path/section, or a Low `DESIGN_VARIANCE` product-led context where a second color-coded system would compete with an existing token-based accent scheme.
+- **do_not_apply_to:** a brief with only one primary path/section, or any surface where color already carries a semantic system (state/severity colors, an existing token-based accent scheme) that a second color-coded index would compete with.
 - **non_application_note:** don't copy specific line colors, a map's geometric-distortion technique, or transit-specific iconography — the principle is color-as-index, not "look like a transit map."
 - **freshness:** last_verified_date: 2026-09-21 · review_interval_days: 90
 
